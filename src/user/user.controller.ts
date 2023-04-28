@@ -12,7 +12,7 @@ export class UserController {
     return this.userService.create(createUserDto);
   }
 
-  @Get()
+  @Get('room')
   findAll() {
     return this.userService.findAll();
   }
@@ -22,12 +22,12 @@ export class UserController {
     return this.userService.findOne(+id);
   }
 
-  @Patch(':id')
+  @Patch('room')
   update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
     return this.userService.update(+id, updateUserDto);
   }
 
-  @Delete(':id')
+  @Delete('guest')
   remove(@Param('id') id: string) {
     return this.userService.remove(+id);
   }

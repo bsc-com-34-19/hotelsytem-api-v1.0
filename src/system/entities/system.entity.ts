@@ -1,7 +1,7 @@
 import {Column, Entity, PrimaryGeneratedColumn,} from 'typeorm'
 
 @Entity()
-export class User {
+export class Systems {
     @PrimaryGeneratedColumn()
     id: number;
 
@@ -15,7 +15,9 @@ export class User {
     email: string;
 
     @Column()
-    creditcard: number;
-
+    account: number;
 }
 
+
+
+export class System {}
